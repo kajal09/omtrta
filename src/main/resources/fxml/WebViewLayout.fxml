@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="722.0" prefWidth="675.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kajalbordhon.controllers.WebViewLayoutController">
+   <children>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="722.0" prefWidth="675.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <GridPane gridLinesVisible="true" prefHeight="169.0" prefWidth="1027.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="508.5" minWidth="10.0" prefWidth="147.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="860.0" minWidth="10.0" prefWidth="528.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="24.5" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="30.5" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="29.5" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="52.5" minHeight="10.0" prefHeight="48.5" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="169.0" text="%From" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="13.0" prefHeight="28.0" prefWidth="170.0" text="%To" textAlignment="CENTER" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="51.0" prefHeight="28.0" prefWidth="170.0" text="%CC" textAlignment="CENTER" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="66.0" prefHeight="29.0" prefWidth="169.0" text="%Subject" textAlignment="CENTER" GridPane.rowIndex="3" />
+                  <Label fx:id="fromId" prefHeight="25.0" prefWidth="854.0" GridPane.columnIndex="1" />
+                  <Label fx:id="toId" layoutX="181.0" layoutY="12.0" prefHeight="25.0" prefWidth="854.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="ccId" layoutX="181.0" layoutY="40.0" prefHeight="25.0" prefWidth="854.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="subjectId" layoutX="181.0" layoutY="68.0" prefHeight="24.0" prefWidth="854.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="100.0" prefHeight="43.0" prefWidth="169.0" text="%Attachments" textAlignment="CENTER" GridPane.rowIndex="4" />
+                  <HBox fx:id="attachmentHBox" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+         </top>
+         <center>
+            <WebView fx:id="webViewId" prefHeight="200.0" prefWidth="200.0" stylesheets="@../styles/root.css" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

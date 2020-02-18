@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.web.HTMLEditor?>
+
+<AnchorPane id="AnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="764.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kajalbordhon.controllers.ComposeEmailController">
+   <children>
+      <BorderPane layoutX="-1.0" layoutY="1.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+         <top>
+            <ToolBar prefHeight="42.0" prefWidth="675.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button mnemonicParsing="false" onAction="#send" text="%Send" />
+                  <Button mnemonicParsing="false" onAction="#discard" text="%Discard" />
+              </items>
+            </ToolBar>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                   <children>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="722.0" prefWidth="675.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <GridPane gridLinesVisible="true" prefHeight="169.0" prefWidth="1027.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="508.5" minWidth="10.0" prefWidth="182.5" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1101.0" minWidth="10.0" prefWidth="1097.5" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="24.5" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="30.5" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="29.5" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="52.5" minHeight="10.0" prefHeight="48.5" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="169.0" text="%To" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="13.0" prefHeight="28.0" prefWidth="170.0" text="%CC" textAlignment="CENTER" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="51.0" prefHeight="28.0" prefWidth="170.0" text="%BCC" textAlignment="CENTER" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="66.0" prefHeight="29.0" prefWidth="169.0" text="Subject:" textAlignment="CENTER" GridPane.rowIndex="3" />
+                  <TextField fx:id="toId" prefHeight="25.0" prefWidth="854.0" promptText="%Listsemicolon" GridPane.columnIndex="1" />
+                  <TextField fx:id="ccId" layoutX="181.0" layoutY="12.0" prefHeight="25.0" prefWidth="854.0" promptText="%Listsemicolon" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="bccId" layoutX="181.0" layoutY="40.0" prefHeight="25.0" prefWidth="854.0" promptText="%Listsemicolon" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="subjectId" layoutX="181.0" layoutY="68.0" prefHeight="24.0" prefWidth="854.0" promptText="%Subject2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <HBox fx:id="attachmentHBox" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Button mnemonicParsing="false" onAction="#addAttach" prefHeight="48.0" prefWidth="183.0" text="%AddAttachments" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+         </top>
+                     <center>
+                        <HTMLEditor fx:id="htmlEditorId" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" prefHeight="200.0" prefWidth="506.0" BorderPane.alignment="CENTER" />
+                     </center>
+      </BorderPane>
+   </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

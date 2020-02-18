@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="emailTableAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="722.0" prefWidth="415.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kajalbordhon.controllers.EmailTableController">
+   <children>
+      <TableView fx:id="emailTableView" minHeight="0.0" minWidth="0.0" onContextMenuRequested="#emailSelected" onDragDetected="#dragDetected" onMouseClicked="#emailSelected" prefHeight="722.0" prefWidth="415.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="EmailTableSender" maxWidth="1.7976931348623157E308" prefWidth="122.0" text="%Sender" />
+          <TableColumn fx:id="emailTableSubject" maxWidth="1.7976931348623157E308" prefWidth="192.0" text="%Subject2" />
+            <TableColumn fx:id="emailTableReceived" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="100.0" text="%Received" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

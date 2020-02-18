@@ -1,0 +1,6 @@
+AnchorPane{
+    -fx-background-color: linear-gradient(#000000, #434343);
+}
+Button {
+    -fx-background-color: linear-gradient(#007991, #78ffd6);
+}
